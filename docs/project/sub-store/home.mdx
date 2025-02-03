@@ -1,0 +1,145 @@
+---
+title: "Sub Store 主页"
+---
+
+import { Card, LinkCard } from 'rspress/theme';
+
+<div style={{ marginBottom: '2rem' }}>
+  <Card
+    title="Sub Store"
+    icon="🔗"
+    content="Sub Store 是一款强大的高级订阅管理器，适用于 QX、Loon、Surge、Stash 和 Shadowrocket。"
+  />
+</div>
+
+现在Sub Store已拥有多个版本，可以部署在代理App、服务器(含Docker版)、~~Hugging Face~~(近期不可用)，也可作为Android模块(需root并安装模块管理软件)
+
+### Sub Store 能做什么？
+
+如其介绍，Sub Store相当强大，其有以下功能：
+
+1. 基础功能
+   1. 订阅汇总
+   2. 订阅储存
+   3. 订阅同步
+   4. 订阅转换（适配不同代理工具）
+   5. 本地节点转订阅
+   6. 节点过滤/整理/重命名/去重
+   7. 基于gist的文件管理、同步
+2. 进阶功能：对节点进行脚本操作
+   1. 节点的解锁测试
+   2. 节点入口落地检测
+   3. 节点测速
+   4. UDP检测
+   5. 利用Cloudflare对节点进行裂变/优选等
+   6. ~~抓取Telegram频道中的节点~~(嘘🤫)
+
+### Sub Store 相关教程
+<br/>
+<div style={{ 
+  display: 'grid',
+  gap: '1rem',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  marginBottom: '2rem'
+}}>
+  <LinkCard
+    title="代理软件版"
+    description="适用于Loon、QX、Surge、Stash、Shadowrocket"
+    href="/project/sub-store/tutorial/proxyapp"
+  />
+  <LinkCard
+    title="VPS(含Docker版)"
+    description="在自己的服务器上自建Sub Store"
+    href="/project/sub-store/tutorial/self"
+  />
+  <LinkCard
+    title="Android 模块"
+    description="在Magisk, KernelSU & APatch上将Sub Store作为模块安装"
+    href="/project/sub-store/tutorial/androidmodule"
+  />
+</div>
+
+> "搭配 VPings 探针 App 使用"需求较低，暂不迁移至此站，如有需求，请前往[Notion站](https://xream.notion.site/VPings-App-9683c043f683426393a05c258786fc74)
+
+### Sub Store相关链接
+
+#### GitHub
+
+<br/>
+
+<div style={{ 
+  display: 'grid',
+  gap: '1rem',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  marginBottom: '2rem'
+}}>
+  <LinkCard
+    title="项目链接"
+    description="sub-store-org / Sub-Store"
+    href="https://github.com/sub-store-org/Sub-Store"
+  />
+  <LinkCard
+    title="GitHub Releases"
+    description="Sub-Store Releases"
+    href="https://github.com/sub-store-org/Sub-Store/releases"
+  />
+  <LinkCard
+    title="官方脚本示例"
+    description="Sub-Store/scripts"
+    href="https://github.com/sub-store-org/Sub-Store/tree/master/scripts"
+  />
+  <LinkCard
+    title="官方配置指南"
+    description="Sub-Store/config"
+    href="https://github.com/sub-store-org/Sub-Store/tree/master/config"
+  />
+</div>
+
+#### 教程站
+
+<br/>
+
+<div style={{ 
+  display: 'grid',
+  gap: '1rem',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  marginBottom: '2rem'
+}}>
+  <LinkCard
+    title="官方Notion教程站"
+    description="⚠️更新过时警告⚠️"
+    href="https://www.notion.so/Sub-Store-6259586994d34c11a4ced5c406264b46"
+  />
+  <LinkCard
+    title="小一的Notion教程站"
+    description="活跃中"
+    href="https://xream.notion.site/Sub-Store-abe6a96944724dc6a36833d5c9ab7c87"
+  />
+</div>
+
+#### TG
+
+<br/>
+
+<div style={{ 
+  display: 'grid',
+  gap: '1rem',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  marginBottom: '2rem'
+}}>
+  <LinkCard
+    title="官方频道"
+    description="发布&脚本&教程"
+    href="https://t.me/cool_scripts"
+  />
+  <LinkCard
+    title="折腾啥"
+    description="导航与教程"
+    href="https://t.me/zhetengsha"
+  />
+  <LinkCard
+    title="快速搜索"
+    description="书记搜 Shokiso"
+    href="https://t.me/shokisobot?start=channel___4de390cc-2c2f-47d7-a0bd-5ab0faa23aa6"
+  />
+</div>

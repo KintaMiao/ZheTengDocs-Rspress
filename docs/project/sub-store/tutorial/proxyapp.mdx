@@ -1,0 +1,128 @@
+---
+title: "Sub Store 代理工具版教程"
+prev:
+  link: /project/sub-store/home
+  label: Sub Store 主页
+---
+
+import { Card, LinkCard } from 'rspress/theme';
+
+:::tip
+本部分转自[GitHub官方教程](https://github.com/sub-store-org/Sub-Store/tree/master/config)
+:::
+
+### 1. Loon
+
+<br/>
+
+<LinkCard
+  title="Loon 插件"
+  description="点击安装 Loon 插件"
+  href="https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon.plugin"
+/>
+
+### 2. Surge
+
+<br/>
+
+##### 关于 Surge 的格外说明
+
+Surge Mac 版如何支持 SSR, 如何去除 HTTP 传输层以支持 类似 VMess HTTP 节点等 请查看 [链接参数说明](/project/sub-store/tutorial/linksreference)
+
+定时处理订阅 功能, 避免 App 内拉取超时, 请查看 [定时处理订阅](https://t.me/zhetengsha/1449)
+
+<div style={{ 
+  display: 'grid',
+  gap: '1rem',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  marginBottom: '2rem'
+}}>
+  <LinkCard
+    title="Beta 版"
+    description="支持最新 Surge iOS TestFlight 版本的特性"
+    href="https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge-Beta.sgmodule"
+  />
+  <LinkCard
+    title="官方默认版模块"
+    description="支持 App 内使用编辑参数"
+    href="https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge.sgmodule"
+  />
+  <LinkCard
+    title="经典版(带 ability)"
+    description="固定带 ability 参数版本,适用于加旗帜脚本或者cname脚本"
+    href="https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge-ability.sgmodule"
+  />
+  <LinkCard
+    title="经典版(不带 ability)"
+    description="固定不带 ability 参数版本"
+    href="https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge-Noability.sgmodule"
+  />
+</div>
+
+> 最新版 Surge 已删除 `ability: http-client-policy` 参数, 模块暂不做修改, 对测落地功能无影响
+
+### 3. QX
+
+<br/>
+
+<div style={{ 
+  display: 'grid',
+  gap: '1rem',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  marginBottom: '2rem'
+}}>
+  <LinkCard
+    title="重写规则"
+    description="QX 重写规则订阅"
+    href="https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/QX.snippet"
+  />
+  <LinkCard
+    title="定时任务"
+    description="QX 定时任务配置"
+    href="https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/QX-Task.json"
+  />
+</div>
+
+### 4. Stash
+
+<br/>
+
+<LinkCard
+  title="Stash 覆写"
+  description="点击安装 Stash 覆写"
+  href="https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Stash.stoverride"
+/>
+
+### 5. Shadowrocket
+
+<br/>
+
+<LinkCard
+  title="Shadowrocket 模块"
+  description="点击安装 Shadowrocket 模块"
+  href="https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Surge-Noability.sgmodule"
+/>
+
+## 使用 Sub-Store
+
+1. 使用 Safari 打开这个 https://sub.store 如网页正常打开并且未弹出任何错误提示，说明 Sub-Store 已经配置成功。
+2. 可以把 Sub-Store 添加到主屏幕，即可获得类似于 APP 的使用体验。
+3. 更详细的使用指南请参考[文档](https://www.notion.so/Sub-Store-6259586994d34c11a4ced5c406264b46)。
+
+<div style={{ 
+  display: 'grid',
+  gap: '1rem',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+  marginTop: '2rem'
+}}>
+  <LinkCard
+    title="链接参数说明"
+    description="了解链接参数的详细说明"
+    href="/project/sub-store/tutorial/linksreference"
+  />
+  <LinkCard
+    title="脚本使用说明"
+    description="了解脚本的使用方法"
+    href="/project/sub-store/tutorial/scriptreference"
+  />
+</div>

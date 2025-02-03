@@ -1,0 +1,122 @@
+---
+title: "自建 Sub Store 教程"
+prev:
+  link: /project/sub-store/home
+  label: Sub Store 主页
+---
+
+import { Card, LinkCard, Tab, Tabs } from 'rspress/theme';
+
+<LinkCard
+  title="官方教程站（Notion）"
+  description="由 xream 在 Notion 上搭建的自建教程站"
+  href="https://xream.notion.site/Sub-Store-Docker-8efc1aea40fa431b9a562b78994e7fb8"
+/>
+
+### Docker镜像获取
+
+#### ⭐️ 推荐 ⭐️ 官方 Docker Hub 打包版
+
+<br/>
+
+<LinkCard
+  title="Docker Hub: xream/sub-store"
+  description="由开发者之一 xream 打包的 Docker 镜像"
+  href="https://hub.docker.com/r/xream/sub-store"
+/>
+
+#### 群友打包版
+
+<br/>
+
+<LinkCard
+  title="Docker Hub: lin8666/sub-store"
+  description="由 折腾啥 群组的群友 打包的 Docker 镜像"
+  href="https://hub.docker.com/r/xream/sub-store"
+/>
+
+### 快速教程
+
+:::note
+此部分适用于 **熟练使用 Docker 的用户**
+
+普通用户请导航至下方[详细部署教程](#详细部署教程)
+:::
+
+**请先创建一个用于存储数据的目录**
+
+标准启动指令：
+
+```shell
+docker run -it -d \
+--restart=always \
+-e "SUB_STORE_CRON=55 23 * * *" \
+-e SUB_STORE_FRONTEND_BACKEND_PATH=/XXXXXxxxxx1234567890 \
+-p YOURIP:3001:3001 \
+-v /etc/sub-store:/opt/app/data \
+--name sub-store \
+xream/sub-store
+```
+
+其中：
+1. 将`SUB_STORE_FRONTEND_BACKEND_PATH`改为`20位随机字符串（不含特殊符号）`
+2. 将`/etc/sub-store`修改为`数据目录`
+3. IP按需修改：
+    1. 本地运行修改为`127.0.0.1`
+    2. 远程访问修改为`服务器IP`
+4. 有HTTP-META需求的将`xream/sub-store`修改为`xream/sub-store:http-meta`
+
+
+### 详细部署教程
+
+请进行选择：
+
+<Tabs>
+  <Tab label="Docker">
+    <Tabs>
+      <Tab label="命令行">
+        <Tabs>
+          <Tab label="Docker Compose + Caddy">
+            <LinkCard
+              title="透过 Docker Compose 以及 Caddy 部署 Sub-Store"
+              description="由 Nebulosa Cat 编写的教程"
+              href="https://nebulosa-cat.moe/10/host-sub-store-by-docker-compose-and-caddy/"
+            />
+          </Tab>
+          <Tab label="Docker + npm">
+            <LinkCard
+              title="【VPS自建Sub-store】Ubuntu+Docker+npm 反代"
+              description=""
+              href="https://boom-sumac-5f2.notion.site/VPS-Sub-store-Ubuntu-Docker-npm-93ea3f047fdb41f99c0bd04085e49adc"
+            />
+          </Tab>
+          <Tab label="Docker + nginx">
+            <LinkCard
+              title="通过 Docker 在 VPS 上架设 Sub-Store"
+              description="由猫咪编写的教程，请注意：本教程以前存在一些问题，现在应该已经修正，但仍需自行鉴别"
+              href="https://surge.tel/22/2953/"
+            />
+          </Tab>
+        </Tabs>
+      </Tab>
+      <Tab label="宝塔面板">
+        <Tabs>
+          <Tab label="Docker + nginx">
+            <LinkCard
+              title="在宝塔面板上利用 Docker 和 nginx 搭建 Sub-Store"
+              description="由 MiasaMoe编写 的教程"
+              href="https://miasamoe.xlog.app/sub-store-deploy"
+            />
+          </Tab>
+        </Tabs>
+      </Tab>
+    </Tabs>
+  </Tab>
+  <Tab label="直接运行">
+    <LinkCard
+      title="通过 VPS 架设 Sub-Store (新版)"
+      description="由猫咪编写的、直接在 VPS 运行 Sub Store 的教程"
+      href="https://surge.tel/08/2930/"
+    />
+  </Tab>
+</Tabs>
